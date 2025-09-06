@@ -2,35 +2,269 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistemas lineares</title>
     <link rel="stylesheet" href="../../CSS/ModoClaro.css" id="EstiloPagina">
 </head>
+
 <body>
 
     <header>
-        <button onclick="mudarModo()">mudar modo</button>
+
+        <button onclick="mudarModo()" id="btnMudarModo">Mudar para modo escuro</button>
         <a href="../../index.html">2º Ano</a>
         <a href="../index.html">Index</a>
         <a href="Sistemas_Lineares.html">Sistemas Lineares</a>
         <a href="Matrizes_Inversas.html">Matrizes inversas</a>
-        <a href="Criptografia.html">Criptografia</a>
-        <a href="Criptografia.html">Criptografante</a>
-        <a href=""> ??? </a>
-        <a href=""> ??? </a>
-        <a href=""> ??? </a>
+        <a href="Criptografia.html">Calculadora Criptografante</a>
+        <a href="TrigonometriaTrianguloRetangulo.html"> Tringonometria no Triangulo Retângulo </a>
 
-</header>
-<br>
-<br>
-<main>
-    <div class="maine-centralizado">
-        <h1>Ainda não completo</h1>
-    </div>
-</main>
+    </header>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Sistemas Lineares</h1>
+            <hr color="black">
+            <br>
+            <ul id="unordenedList">
+                <li>
+                    <h2>Equações Lineares</h2>
+                </li>
+                <p>São equações que envolvem uma ou mais incógnitas, sendo que todas
+                    elas estão no expoente 1 e não tem termos mistos do tipo "2xy"</p>
+                <p><b>Ex:</b> a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub> +
+                    a<sub>3</sub>x<sub>3</sub> + <sup>...</sup> + a<sub>n</sub>x<sub>n</sub> +
+                    b = 0
+                </p>
+                <p>Sendo que todos os "a" são coeficientes reais,
+                    os "x" são as incógnitas e "b" é o termo independente
+                </p>
+                <p><b>Solução</b>: é a sequência de números reais, que, quando colocados
+                    no lugar das incógnitas, tornam verdadeira a igualdade dada</p>
+                <br>
+                <li>
+                    <h2>Tipos de Equações Lineares</h2>
+                </li>
+                <p>Elas podem ser SPI(Sistema Possível Intederminado), SPD(Sistema
+                    Possível Determinado) ou SI(Sistema Impossível)</p>
+                <ul>
+                    <li><b>SPI</b></li>
+                    <p>São sistemas onde existem muitas (infinitas), formas de tornar a igualdade
+                        verdadeira
+                    </p>
+                    <p><b>Ex:</b> a + X = 1 <br>
+                        Neste exemplo, o "a" pode ser 1 e o "X" pode ser 0, ou então, o "X"
+                        pode ser 1 e o "a" pode ser 0.</p>
+                    <p>Porém existem alguns casos em que existe uma relação entre as incógnitas
+                        para que a igualdaade seja verdadeira, nestes casos podemos dar uma
+                        "resposta" para determinar qual será o número de determinada ingonita,
+                        a depender de outra ingógnita
+                    </p>
+                    <p><b>Ex:</b> 2X + 1y = 3<br>
+                        Neste exemplo, para todo valor de "X", o y valerá "-2X + 3", escrevemos isso
+                        da seguinte forma: <b>SPI(X, -2X + 3)</b></p>
+                    <!--Eu consegui fazer esse cálculo errado e o Chat GPT me corrigiu e me deu o calculo correto-->
+
+                    <li><b>SPD</b></li>
+                    <p>São sistemas onde apenas um conjunto de números consegue tornar a igualdade verdadeira<br>
+                        Isso costuma acontecer mais quando tem duas equações lineares.
+                    </p>
+                    <p><b>Ex:</b>
+                        <br>2X + 3y = 19
+                        <br>X - y = -3
+                        <br> Neste exemplo o X precisa ser 2 e o y precisa ser 5,
+                        qualquer outro conjunto falhará em tornar a igualdade verdadeira
+                    </p>
+
+                    <li><b>SI</b></li>
+                    <p>Basicamente são sistemas que não tem solução, ou seja, não existe uma
+                        forma de deixar a igualdade verdadeira
+                    </p>
+                    <p><b>Ex:</b>
+                        <br>X + 2y = 12
+                        <br>3X + 6y = 0
+                    <h1>Confira isso</h1>
+                    </p>
+                </ul>
+
+                <br>
+                <li>
+                    <h2>Sistema Linear 2x2</h2>
+                </li>
+                <p>É um sistema de duas equações lineares e 2 incógnitas
+                    <br>Existem dois métodos principais para resolvermos este tipo de sistema:
+                <ul>
+                    <li><b>Método da Adição</b></li>
+                    <p>Neste método você realiza operações nas equações para depois
+                        realizar uma soma entre as duas equações e zerar uma das incógnitas</p>
+                    <p><b>Ex:</b>
+                        <br>2X + 3y = 19
+                        <br>X - y = -3
+                    </p>
+                    <p>Aqui eu irei multiplicar a segunda equação por 3:</p>
+                    <p>
+                        2X + 3y = 19
+                        <br>3X - 3y = -9
+                    </p>
+                    </p>
+                    <p>Agora irei manter a de cima e somar a de cima com a de baixo:</p>
+                    <p>
+                        2X + 3y = 19
+                        <br>(3X<b>+2X</b>) - (3y<b>+3y</b>) = (-9<b>+19</b>)
+                    </p>
+                    <p>
+                        2X + 3y = 19
+                        <br>5X - 0y = 10
+                    </p>
+                    <p>Assim podemos concluir que X = 2<br>
+                        Só falta pegarmos essa ingónita e colocar na primeira equação</p>
+                    <p>2(<b>2</b>) + 3y = 19
+                        <br>4 + 3y = 19
+                        <br>3y = 19 - 4
+                        <br>3y = 15
+                        <br>y = 15/3
+                        <br>y=5
+                        <li><b>Método da substituição</b></li>
+                    <p>Você substitui uma ingógnita por um pedaço de equação</p>
+                    <p><b>Ex:</b>
+                        <br>2X + 3y = 19
+                        <br>X - y = -3
+                    </p>
+                    <p>
+                        2X + 3y = 19
+                        X = y -3
+                    </p>
+                    <p>Agora vamos substituir o "X" da primeira equação por "y - 3"
+                        visto que X vale "y - 3"</p>
+                    <p> 2<b>(y -3)</b> + 3y = 19
+                    <br> 2y -6 + 3y = 19
+                    <br> 5y = 19 + 6
+                    <br> 5y = 25
+                    <br> y = 25/5
+                    <br> y = 5
+                </p>
+                <p>E para descobrir o X, basta colocar o valor de Y em qualquer uma das
+                    duas equações:</p>
+                    <p>
+                        2x + 3y = 19
+                        <br>2x + 3(<b>5</b>) = 19
+                        <br>
+                    </p>
+                </ul>
+                </p>
+
+                <br>
+                <li>
+                    <h2>Interpretação Geométrica dos Sistemas Lineares 2x2</h2>
+                </li>
+                <p></p>
+                <br>
+                <li>
+                    <h2>Sistema Linear 3x3</h2>
+                </li>
+                <p></p>
+                <br>
+                <li>
+                    <h2>Interpretação Geométrica dos Sistemas Lineares 2x2</h2>
+                </li>
+                <p></p>
+                <br>
+                <li>
+                    <h2>Relações entre sistemas lineares e matrizes</h2>
+                </li>
+                <p></p>
+                <br>
+                <li>
+                    <h2>Uso de determinantes</h2>
+                </li>
+
+                <h2>Mediana</h2>
+                <p>A Mediana é o "numero do meio" em uma sequência de números. <br>
+                    Para calcular a mediana, basta você pegar todos os numeros
+                    do conjunto e ordená-los do menor para o maior, então é só
+                    observar qual foi o número que ficou no meio dessa sequência. <br>
+                    Porém, se a quantidade total de numeros for par, não terá um
+                    único número no meio, terão dois, nesse caso você deve pegar
+                    esses dois números e fazer a média entre eles, essa será a mediana.
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Sequência de números: 10, 3, 7, 1, 0 <br>
+                    Primeiro você deve ordenar do menor para o maior: 0, 1, 3, 7, 10 <br>
+                    Nesse caso podemos ver que o '3' é o número do meio, logo, ele é a mediana.
+                </p>
+                <p><b>Outro exemplo:</b> <br>
+                    Sequência de números: 8, 10, 2, 0, 4, 6
+                    Primeiro você deve ordenar do menor para o maior: 0, 2, 4, 6, 8, 10
+                    Nesse caso podemos ver que o '4' e o '6' são os números do meio. <br>
+                    Nessa situação fazemos a média entre o 4 e o 6, e o resultado é 5. <br>
+                    5 é a mediana.
+                </p>
+                <hr color="black">
+                <p style="font-size: 20px;">A partir daqui fica um pouquinho mais complicado</p>
+                <h2>Variância(V)</h2>
+                <p>A variância define o quanto o conjunto de números varia em relação a sua média. <br>
+                    Para podermos calcular a variância primeiro precisamos calcular a média.
+                </p>
+                <p><b>Fórmula:</b> <br>
+                    <img src="../Imagens/Variancia.jpg" height="60px" style="border-radius: 10px;"><br>
+                    Em outra palavras: é a soma de todos os números vezes eles mesmos menos a média elevado a dois. <br>
+                    Fazendo a fórmula: V = [ (x<sub>1</sub> - M)<sup>2</sup> + (x<sub>2</sub> - M)<sup>2</sup> + ... +
+                    (x<sub>n</sub> - M)<sup>2</sup> ] /n
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Sequência de números: 10, 3, 7, 1, 4 <br>
+                    M = (10 + 3 + 7 + 1 + 4) / 5<br>
+                    M = 25 / 5 <br>
+                    M = 5 <br>
+                    <br>
+                    Agora calculamos a variância <br>
+                    V = [ (10 - 5)<sup>2</sup> + (3 - 5)<sup>2</sup> + (7 - 5)<sup>2</sup> + (1 - 5)<sup>2</sup> + (4 -
+                    5)<sup>2</sup> ] / 5 <br>
+                    V = [ (5)<sup>2</sup> + (-2)<sup>2</sup> + (2)<sup>2</sup> + (-4)<sup>2</sup> + (-1)<sup>2</sup> ]
+                    /5 <br>
+                    V = [ 25 + 4 + 4 + 16 + 1 ] /5 <br>
+                    V = 50 / 5 <br>
+                    V = 10
+                </p>
+                <h2>Desvio Padrão(DP)</h2>
+                <p>A variância acaba por mudar a unidade de medida de algumas coisas
+                    quando eleva ela ao quadrado, por isso existe o desvio padrão,
+                    para pegar a raiz da variância e fazer voltar a mesma unidade
+                    de medida
+                </p>
+                <p><b>Fórmula:</b> <br>
+                    DP = &radic;V
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Pegarei a variância do exemplo anterior.<br>
+                    DP = &radic;10 <br>
+                    DP &#8776; 3,1623
+                </p>
+                <h2>Coeficiente de Variação(CV)</h2>
+                <p>O coenficiente de variação basicamente transforma o DP em uma porcentagem</p>
+                <p><b>Fórmula:</b> <br>
+                    CV = (DP / M) * 100
+                </p>
+                <p><b>Exemplo:</b> <br>
+                    Pegarei o DP e a Média do exemplo da Variância.<br>
+                    CV = (3,1623 / 5) * 100<br>
+                    CV = 0.63246 * 100<br>
+                    CV &asymp; 63,246%
+                </p>
+
+            </ul>
+
+        </div>
+    </main>
+    <footer>
+        <h1>Soli Deo Gloria!</h1>
+    </footer>
 
     <script src="../../../Scripts_Gerais/Modos.js"></script>
 </body>
+
 </html>
