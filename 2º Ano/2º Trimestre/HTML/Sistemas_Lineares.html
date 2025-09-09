@@ -1,0 +1,723 @@
+<!--Soli Deo Gloria-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas lineares</title>
+    <link rel="stylesheet" href="../../CSS/ModoClaro.css" id="EstiloPagina">
+</head>
+
+<body>
+
+    <header>
+
+        <button onclick="mudarModo()" id="btnMudarModo">Mudar para modo escuro</button>
+        <a href="../../index.html">2º Ano</a>
+        <a href="../index.html">Index</a>
+        <a href="Sistemas_Lineares.html">Sistemas Lineares</a>
+        <a href="Matrizes_Inversas.html">Matrizes inversas</a>
+        <a href="Criptografia.html">Calculadora Criptografante</a>
+        <a href="TrigonometriaTrianguloRetangulo.html"> Tringonometria no Triangulo Retângulo </a>
+        <a href="autoAvaliacao.html">Auto Avaliação </a>
+
+    </header>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Sistemas Lineares</h1>
+            <hr color="black" style="width: 100%;">
+            <br>
+            <ul id="unordenedList">
+                <li>
+                    <h2>Equações Lineares</h2>
+                </li>
+                <p>São equações que envolvem uma ou mais incógnitas, sendo que todas
+                    elas estão no expoente 1 e não tem termos mistos do tipo "2xy"</p>
+                <p><b>Ex:</b> a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub> +
+                    a<sub>3</sub>x<sub>3</sub> + <sup>...</sup> + a<sub>n</sub>x<sub>n</sub> +
+                    b = 0
+                </p>
+                <p>Sendo que todos os "a" são coeficientes reais,
+                    os "x" são as incógnitas e "b" é o termo independente
+                </p>
+                <p><b>Solução</b>: é a sequência de números reais, que, quando colocados
+                    no lugar das incógnitas, tornam verdadeira a igualdade dada</p>
+                <br>
+                <li>
+                    <h2>Tipos de Equações Lineares</h2>
+                </li>
+                <p>Elas podem ser SPI(Sistema Possível Intederminado), SPD(Sistema
+                    Possível Determinado) ou SI(Sistema Impossível)</p>
+                <ul>
+                    <li><b>SPI</b></li>
+                    <p>São sistemas onde existem muitas (infinitas), formas de tornar a igualdade
+                        verdadeira
+                    </p>
+                    <p><b>Ex:</b> a + x = 1 <br>
+                        Neste exemplo, o "a" pode ser 1 e o "X" pode ser 0, ou então, o "X"
+                        pode ser 1 e o "a" pode ser 0.</p>
+                    <p>Porém existem alguns casos em que existe uma relação entre as incógnitas
+                        para que a igualdaade seja verdadeira, nestes casos podemos dar uma
+                        "resposta" para determinar qual será o número de determinada ingonita,
+                        a depender de outra ingógnita
+                    </p>
+                    <p><b>Ex:</b> 2x + 1y = 3<br>
+                        Neste exemplo, para todo valor de "X", o y valerá "-2x + 3", escrevemos isso
+                        da seguinte forma: <b>SPI(x, -2x + 3)</b></p>
+                    <!--Eu consegui fazer esse cálculo errado e o Chat GPT me corrigiu e me deu o calculo correto-->
+
+                    <li><b>SPD</b></li>
+                    <p>São sistemas onde apenas um conjunto de números consegue tornar a igualdade verdadeira<br>
+                        Isso costuma acontecer mais quando tem duas equações lineares.
+                    </p>
+                    <p><b>Ex:</b>
+                        <br>2x + 3y = 19
+                        <br>x - y = -3
+                        <br> Neste exemplo o X precisa ser 2 e o y precisa ser 5,
+                        qualquer outro conjunto falhará em tornar a igualdade verdadeira
+                    </p>
+
+                    <li><b>SI</b></li>
+                    <p>Basicamente são sistemas que não tem solução, ou seja, não existe uma
+                        forma de deixar a igualdade verdadeira
+                    </p>
+                    <p><b>Ex:</b>
+                        <br>x + 2y = 12
+                        <br>3x + 6y = 0
+                    <h1>Confira isso</h1>
+                    </p>
+                </ul>
+
+                <br>
+                <li>
+                    <h2>Sistema Linear 2x2</h2>
+                </li>
+                <p>É um sistema de duas equações lineares e 2 incógnitas
+                    <br>Existem dois métodos principais para resolvermos este tipo de sistema:
+                <ul>
+                    <li><b>Método da Adição</b></li>
+                    <p>Neste método você realiza operações nas equações para depois
+                        realizar uma soma entre as duas equações e zerar uma das incógnitas</p>
+                    <p><b>Ex:</b>
+                        <br>2x + 3y = 19
+                        <br>x - y = -3
+                    </p>
+                    <p>Aqui eu irei multiplicar a segunda equação por 3:</p>
+                    <p>
+                        2x + 3y = 19
+                        <br>3x - 3y = -9
+                    </p>
+                    </p>
+                    <p>Agora irei manter a de cima e somar a de cima com a de baixo:</p>
+                    <p>
+                        2x + 3y = 19
+                        <br>(3x<b>+2x</b>) - (3y<b>+3y</b>) = (-9<b>+19</b>)
+                    </p>
+                    <p>
+                        2x + 3y = 19
+                        <br>5x - 0y = 10
+                    </p>
+                    <p>Assim podemos concluir que X = 2<br>
+                        Só falta pegarmos essa ingónita e colocar na primeira equação</p>
+                    <p>2(<b>2</b>) + 3y = 19
+                        <br>4 + 3y = 19
+                        <br>3y = 19 - 4
+                        <br>3y = 15
+                        <br>y = 15/3
+                        <br>y=5
+                        <li><b>Método da substituição</b></li>
+                    <p>Você substitui uma ingógnita por um pedaço de equação</p>
+                    <p><b>Ex:</b>
+                        <br>2x + 3y = 19
+                        <br>x - y = -3
+                    </p>
+                    <p>
+                        2x + 3y = 19
+                        x = y -3
+                    </p>
+                    <p>Agora vamos substituir o "X" da primeira equação por "y - 3"
+                        visto que X vale "y - 3"</p>
+                    <p> 2<b>(y -3)</b> + 3y = 19
+                        <br> 2y -6 + 3y = 19
+                        <br> 5y = 19 + 6
+                        <br> 5y = 25
+                        <br> y = 25/5
+                        <br> y = 5
+                    </p>
+                    <p>E para descobrir o X, basta colocar o valor de Y em qualquer uma das
+                        duas equações:</p>
+                    <p>
+                        2x + 3y = 19
+                        <br>2x + 3(<b>5</b>) = 19
+                        <br>
+                    </p>
+                </ul>
+                </p>
+
+                <br>
+                <li>
+                    <h2>Interpretação Geométrica dos Sistemas Lineares 2x2</h2>
+                </li>
+                <p>É uma forma de representar um sistema linear com um gráfico. <br>
+                    O ponto onde as duas retas se cruzam é o valor de x e y que torna a
+                    igualdade verdadeira
+                </p>
+                <p>Existem 3 tipos de gráfico, que estão diretamente ligados com
+                    o tipo de sistema linear(SPI, SPD e SI)</p>
+                <p>
+                <ul>
+                    <li>
+                        <b style="font-size: 19px;">SPI</b> <br>
+                        Neste caso as retas são coincidentes, ou seja, tem infinitos
+                        pontos comuns, infinitos possíveis valores de x e y para
+                        tornar verdadeira a igualdade <br>
+                        <b>Ex:</b><br>
+                        2x + 2y = 6<br>
+                        8x + 8y = 24<br>
+                        <br>
+                        <iframe src="https://www.geogebra.org/calculator/ucjz7z6x?embed"
+                            class="graficosGeogebra"></iframe>
+                    </li>
+                    <br>
+                    <li>
+                        <b style="font-size: 19px;">SPD</b> <br>
+                        Neste caso há somente um único ponto onde as retas se cruzam, e
+                        os valores de x e y deste ponto que tornam a igualdade verdadeira <br>
+                        <b>Ex:</b><br>
+                        4x - 3y = 10<br>
+                        2x + 5y = 14<br>
+                        <br>
+                        <iframe src="https://www.geogebra.org/calculator/qbaha33a?embed"
+                            class="graficosGeogebra"></iframe>
+                    </li>
+                    <br>
+                    <li>
+                        <b style="font-size: 19px;">SI</b> <br>
+                        Neste caso as retas nunca se cruzam, logo, não há valor de x e y
+                        que torne verdadeira a igualdade <br>
+                        <b>Ex:</b><br>
+                        2x + 1y = 6<br>
+                        10x + 5y = 24<br>
+                        <br>
+                        <iframe src="https://www.geogebra.org/calculator/vjeycnkn?embed"
+                            class="graficosGeogebra"></iframe>
+                    </li>
+                </ul>
+                </p>
+                <br>
+                <li>
+                    <h2>Sistema Linear 3x3</h2>
+                </li>
+                <p>É um sistema que possui 3 equações lineares e 3 incógnitas.<br>
+                    Assim como em sistemas lineares 2x2, este sistema também pode ser
+                    SPI, SPD ou SI. <br>
+                    Aprendemos em aula dois diferentes métodos para resolver estes sistemas,
+                    o método da substituição e o método do escalonamento.
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        <b style="font-size: 21px;">Substituição</b><br>
+                        Consiste em substituir as ingónitas por alguma equação equivalente.<br>
+                        <b>Ex:</b><br>
+                        <div id="EquacoesLinear3x3Subtituicao">
+                            <div>
+                                x + y + z = 6<br>
+                                2x - y + z = 3<br>
+                                x - y - 2z = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                2x - y + z = 3<br>
+                                x - y - 2z = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Agora substituimos o x da segunda e da terceira equação:
+                                <br>
+                                x = 6 - y - z <br>
+                                2<b>(6 - y - z)</b> - y + z = 3<br>
+                                <b>(6 - y - z)</b> - y - 2z = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                12 -2y -2z - y + z = 3<br>
+                                6 - y - z - y - 2z = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                12 -3y -1z = 3<br>
+                                6 - 2y - 3z = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Agora multiplico por -1 e troco de lado as incógnitas da
+                                segunda equação, isolando o "z":
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = -3 + 12 -3y <br>
+                                6 - 2y - 3z = -7<br>
+                            </div>
+
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                6 - 2y - 3z = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Agora eu subtituo o z da terceira equação:
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                6 - 2y - 3<b>(9 - 3y)</b> = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                6 - 2y <b>- 27 + 9y</b> = -7<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                -2y + 9y = -7 + 27 -6<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                7y = 14<br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                y = 14/7<br>
+                            </div>
+                            <br>
+                            <div>
+                                E assim descobrimos o valor de "y":
+                                <br>
+                                x = 6 - y - z <br>
+                                1z = 9 - 3y <br>
+                                <b>y = 2</b><br>
+                            </div>
+                            <br>
+                            <div>
+                                Agora vamos substituir o valor de y na primeira e na segunda equação
+                                <br>
+                                x = 6 - <b>(2)</b> - z <br>
+                                1z = 9 - 3<b>(2)</b> <br>
+                                <b>y = 2</b><br>
+                            </div>
+                            <br>
+                            <div>
+                                Continuando:
+                                <br>
+                                x = 6 - 2 - z <br>
+                                z = 9 - 6 <br>
+                                <b>y = 2</b><br>
+                            </div>
+                            <br>
+                            <div>
+                                Assim descobrimos que "z" vale 3:
+                                <br>
+                                x = 6 - 2 - z <br>
+                                <b>z = 3</b><br>
+                                <b>y = 2</b><br>
+                            </div>
+                            <br>
+                            <div>
+                                Agora subtituimos o valor de "z" na primeira equação:
+                                <br>
+                                x = 6 - 2 - <b>(3)</b> <br>
+                                <b>z = 3</b> <br>
+                                <b>y = 2</b><br>
+                            </div>
+                            <br>
+                            <div>
+                                Assim descobrimos que "x" vale 1:
+                                <br>
+                                x = 1 <br>
+                                z = 3 <br>
+                                y = 2</b><br>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <li>
+                        <b style="font-size: 21px;">Escalonamento</b><br>
+                        Consiste em transformar os sistemas em uma matriz e fazer
+                        operações entre os sistemas para fazer o coeficiente de
+                        determinadas ingónitas ser igual a "0".<br>
+                        <b>Ex:</b><br>
+                        x + y + z = 6<br>
+                        2x - y + z = 3<br>
+                        x - y - 2z = -7<br>
+                        <br>
+                        Primeiro eu transformo isso em uma matriz:
+                        <br>
+                        <table style="all: unset;">
+                            <thead>
+                                <tr>
+                                    <td><b>x</b></td>
+                                    <td><b>y</b></td>
+                                    <td><b>z</b></td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>-1</td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>-1</td>
+                                <td>-2</td>
+                                <td>-7</td>
+                            </tr>
+                        </table><br>
+                        <br>
+                        Agora eu faço equações, somando duas L<sub>1</sub>(linha 1), com 1 L<sub>2</sub>
+                        <br>
+                        <table style="all: unset;">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td><b>x</b></td>
+                                    <td><b>y</b></td>
+                                    <td><b>z</b></td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td></td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>(2L<sub>1</sub> - L<sub>2</sub>)</td>
+                                <td>2</td>
+                                <td>-1</td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>(L<sub>1</sub> - L<sub>3</sub>)</td>
+                                <td>1</td>
+                                <td>-1</td>
+                                <td>-2</td>
+                                <td>-7</td>
+                            </tr>
+                        </table><br>
+                        <br>
+                        Continuando:
+                        <br>
+                        <table id="contasSistema3x3">
+                            <thead>
+                                <tr>
+                                    <td>x</td>
+                                    <td>y</td>
+                                    <td>z</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>2(1) - (2)</td>
+                                    <td>2(1) - (-1)</td>
+                                    <td>2(1) - (1)</td>
+                                    <td>2(6) - (3)</td>
+                                </tr>
+                                <tr>
+                                    <td>(1) - (1)</td>
+                                    <td>(1) - (-1)</td>
+                                    <td>(1) - (-2)</td>
+                                    <td>(6) - (-7)</td>
+                                </tr>
+                            </tbody>
+                        </table> <br>
+                        <br>
+                        Continuando:
+                        <br>
+                        <table id="contasSistema3x3">
+                            <thead>
+                                <tr>
+                                    <td>x</td>
+                                    <td>y</td>
+                                    <td>z</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>13</td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                        <br>
+                        Agora eu faço 2L<sub>2</sub> - 3L<sub>3</sub>:
+                        <br>
+                        <table id="contasSistema3x3">
+                            <thead>
+                                <tr>
+                                    <td>x</td>
+                                    <td>y</td>
+                                    <td>z</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>2(0) - 3(0)</td>
+                                    <td>2(3) - 3(2)</td>
+                                    <td>2(1) - 3(3)</td>
+                                    <td>2(9) - 3(13)</td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                        <br>
+                        Continuando:
+                        <br>
+                        <table id="contasSistema3x3">
+                            <thead>
+                                <tr>
+                                    <td>x</td>
+                                    <td>y</td>
+                                    <td>z</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>-7</td>
+                                    <td>-21</td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                        <br>
+                        Agora que temos 3 incógnitas zeradas, basta trasnformar
+                        a matriz em um sistema 3x3 novamente:
+                        x + y + z = 6<br>
+                        3y + z = 9<br>
+                        -7z = -21<br>
+                        <br>
+                        Assim descobrimos que -7z = -21<br>
+                        logo, 7z = 21<br>
+                        logo, z = 21/7<br>
+                        logo z = 3 <br>
+                        <br>
+                        Agora só precisamos aplicar o valor de "z" na priemira e
+                        na segunda equação:<br>
+                        x + y + <b>3</b> = 6<br>
+                        3y + <b>3</b> = 9<br>
+                        <br>
+                        Continuando:
+                        <br>
+                        x + y = 6 - 3<br>
+                        3y = 9 - 3<br>
+                        <br>
+                        Continuando:
+                        <br>
+                        x + y = 3<br>
+                        3y = 6<br>
+                        <br>
+                        Continuando:
+                        <br>
+                        x + y = 3<br>
+                        y = 6/3<br>
+                        <br>
+                        Continuando:
+                        <br>
+                        x + y = 3<br>
+                        <b>y = 2</b><br>
+                        <br>
+                        Agora só falta colocar o valor de "y" na primeira equação:
+                        <br>
+                        x + <b>2</b> = 3<br>
+                        <br>
+                        x = 1<br>
+                        y = 2<br>
+                        z = 3<br>
+                    </li>
+                </ul>
+                </p>
+                <br>
+                <li>
+                    <h2>Interpretação Geométrica dos Sistemas Lineares 3x3</h2>
+                </li>
+                <p>
+                    Existem várias possibilidades de figuras que podem surgir
+                    a partir da representação gráfica de sistemas 3x3, visto
+                    que essas imagens serão 3D.<br>
+                    A depender da forma gerada, podemos saber se é um SPI, SPD
+                    ou um SI
+                </p>
+                <p>
+                    Alguns exemplos tirados do material disponibilizado pela professora:<br><br>
+                    <img src="../Imagens/SPD_Sistema3x3_Grafico.png" style="height: 130px; width: 130px; border-radius: 10px;" >
+                    <br>Esse aqui é SPD, pois existe um ponto onde os três planos se encontram
+                    <br>
+                    <br>
+                    <img src="../Imagens/SPI1_Sistema3x3_Grafico.png" style="height: 130px; width: 130px; border-radius: 10px;" >
+                    <br>Esse aqui é SPI, pois existem infinitos pontos onde os três planos se encontram
+                    <br>
+                    <br>
+                    <img src="../Imagens/SPI2_Sistema3x3_Grafico.png" style="height: 130px; width: 130px; border-radius: 10px;" >
+                    <br>Esse aqui é SPI também, pois ainda existem infinitos pontos onde os três planos se encontram
+                    <br>
+                    <br>
+                    <img src="../Imagens/SI_Sistema3x3_Grafico.png" style="height: 130px; width: 130px; border-radius: 10px;" >
+                    <br>Esse aqui é SI, pois não há em momento nenhum um ponto onde os três planos se encontram
+                </p>
+                <br>
+                <li>
+                    <h2>Relações entre sistemas lineares e matrizes</h2>
+                </li>
+                <p>
+                    Um sistema linear 2x2 ou 3x3 pode ser representado por meio de uma matriz.
+                </p>
+                <p><b>Ex:</b><br>
+                    Sistema:<br>
+                    2x - 3y + z = 10<br>
+                    4x + y - 2z = -4<br>
+                    x + 2y + z = 14<br>
+                    <br>
+                    Matriz gerada a partir do sistema:<br>
+                <table style="all: unset;">
+                    <thead>
+                        <tr>
+                            <td><b>x</b></td>
+                            <td><b>y</b></td>
+                            <td><b>z</b></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>2</td>
+                        <td>-3</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>-2</td>
+                        <td>-4</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>14</td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <b>Usos:</b><br>
+                Basicamente isso é usado para facilitar o método do escalonamento
+                </p>
+                <p></p>
+                <br>
+                <li>
+                    <h2>Uso de determinantes</h2>
+                </li>
+                <p>O determinante de uma matriz quadrada incompleta gerada a partir de um sistema 2x2
+                    ou 3x3 pode ser usada para descobrir se o sistema é SPI, SPD ou SI.<br>
+                    Se o determinante for igual a 0, é um SPI ou SI, porém, se o determinante
+                    for diferente de 0, é um SPD.
+                </p>
+
+                </li>
+            </ul>
+
+        </div>
+    </main>
+    <footer>
+        <h1>Soli Deo Gloria!</h1>
+    </footer>
+
+    <script src="../../../Scripts_Gerais/Modos.js"></script>
+</body>
+
+</html>

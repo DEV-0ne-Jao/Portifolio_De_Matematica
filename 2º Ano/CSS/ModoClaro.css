@@ -1,0 +1,269 @@
+/* Soli Deo Gloria */
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+
+    padding-bottom: 80px;
+    padding-top: 120px
+}
+
+header {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 13px;
+    column-gap: 25px;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: aliceblue;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+header a {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 7px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+header button {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 7px;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+main {
+    margin: 10px;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    max-height: 7%;
+    padding: 0px;
+    border-top-left-radius: 99%;
+    border-top-right-radius: 99%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    box-shadow: 0px 0px 13px 11px rgba(0, 0, 0, 0.185);
+}
+
+footer h1 {
+    color: rgb(255, 255, 255);
+}
+
+.imagens {
+    z-index: -1;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.0);
+    /*box-shadow: 0px 0px 13px 11px rgba(0, 0, 0, 0.185);*/
+}
+#imagem1 {
+    position: absolute;
+    left: 70%;
+    top:26%;
+    height: 20%;
+    width: 20%;
+    border-radius: 3px;
+    opacity: 0.456;
+}
+#imagem2 {
+    left: 10%;
+    top:70%;
+    height: 20%;
+    width: 20%;
+    border-radius: 3px;
+    opacity: 0.456;
+}
+#imagem3 {
+    left: 40%;
+    top:30%;
+    height: 20%;
+    width: 20%;
+    border-radius: 3px;
+    opacity: 0.456;
+}
+#imagem4 {
+    left: 40%;
+    top:30%;
+    height: 20%;
+    width: 20%;
+    border-radius: 3px;
+    opacity: 0.456;
+}
+
+
+
+.maine {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 95%;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+.maine-centralizado {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 95%;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.maine-centralizado h1 {
+    padding-left: 0px;
+}
+
+.maine-centralizado p {
+    padding-left: 15px;
+}
+
+.maine-centralizado table {
+
+    background-color: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+
+    padding: 10px;
+}
+
+.maine-centralizado table td {
+    padding: 4px;
+}
+
+.maine-centralizado hr {
+    width: 96%;
+}
+
+.funcoes {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.funcoes button {
+    width: 41%;
+}
+
+.funcoes input {
+    width: 40%;
+}
+
+.tabela-matriz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 5vh;
+    width: 50%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#unordenedList li {
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    font-size: 17px;
+}
+#unordenedList li p b {
+    font-size: 18px;
+}
+#unordenedList li h2{
+    font-size: 24px;
+}
+#unordenedList ul li {
+    background: none;
+    box-shadow: none;
+    padding-left: none;
+    padding-right: none;
+    width: fit-content;
+    border-radius: none;
+}
+
+.graficosGeogebra {
+    width: 400px;
+    height: 300px; 
+    border-style: double;
+    border-radius: 40px;
+    
+}
+
+#EquacoesLinear3x3Subtituicao{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#EquacoesLinear3x3Subtituicao div{
+    background-color: rgba(255, 255, 255, 0.418);
+    border-radius: 10px;
+    padding: 5px;
+    height: fit-content;
+    width: fit-content;
+}
+
+#contasSistema3x3 td{
+    all: unset;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+#contasSistema3x3{
+    all: unset;
+}
+#contasSistema3x3 tr{
+    all: unset;
+    height: 30%;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#contasSistema3x3 td{
+    height: 15px;
+    width: 80px;
+}
