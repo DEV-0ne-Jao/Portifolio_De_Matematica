@@ -1,0 +1,170 @@
+<!--Soli Deo Gloria-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografante</title>
+    <link rel="stylesheet" href="../../CSS/ModoClaro.css" id="EstiloPagina">
+</head>
+
+<body>
+
+    <header>
+
+        <button onclick="mudarModo()" id="btnMudarModo">Mudar para modo escuro</button>
+        <a href="../../index.html">2º Ano</a>
+        <a href="../index.html">Index</a>
+        <a href="Sistemas_Lineares.html">Sistemas Lineares</a>
+        <a href="Matrizes_Inversas.html">Matrizes inversas</a>
+        <a href="Criptografia.html">Calculadora Criptografante</a>
+        <a href="TrigonometriaTrianguloRetangulo.html"> Trigonometria no Triângulo Retângulo </a>
+        <a href="autoAvaliacao.html">Auto Avaliação </a>
+
+
+    </header>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Trigonometria no triângulo retângulo</h1>
+            <p>Um triângulo retângulo é um triângulo que possui 90°
+                em um dos ângulos internos dele</p>
+            <hr>
+            <br>
+            <br>
+            <ul id="unordenedList">
+                <li>
+                    <h2>Teorema de Pitágoras</h2>
+                </li>
+                <p>
+                    O Teorema de Pitágoras é a primeira relação entre medidas
+                    de um triângulo retânculo que aprendemos.<br>
+                    Basicamente ela diz que a soma de cada cateto elevado ao
+                    quadrado, é igual a hipotênusa ao quadrado.<br>
+                    Matematicamente: c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>
+                </p>
+                <p>
+                    <b>Ex:</b><br>
+                    <img src="../Imagens/TrianguloRetangulo_Pitagoras.png" width="150px" height="150px"
+                        style="border-radius: 10px;"><br>
+                    <i style="font-size: 12px; padding-top: 0%;">Imagem tirada da Brasil Escola</i><br><br>
+                    <!--Referência: https://brasilescola.uol.com.br/matematica/triangulo-retangulo.htm-->
+                    Aqui vemos dois catetos, de medidas "8" e "6". <br>
+                    Aplicando Pitágoras: c<sup>2</sup> = 8<sup>2</sup> + 6<sup>2</sup><br>
+                    c<sup>2</sup> = 64 + 36 <br>
+                    c<sup>2</sup> = 100 <br>
+                    c = &radic;100 <br>
+                    c = 10
+                </p>
+
+                <li>
+                    <h2>Relações trigonométricas</h2>
+                </li>
+                <p>
+                    Para estas relações, precisamos nomear cada cateto, por isso,
+                    um se chamara oposto(CO) e o outro adjacente(CA).<br>
+                    O cateto ser chamado de oposto ou adjacente depende do ângulo
+                    de referência que estamos observando.<br>
+                    A hipotenusa(h) sempre permanece hipotenusa independentemente
+                    do ângulo de referência.
+                </p>
+                <p>
+                    Estudamos estas 3 principais relações entre ângulos:<br>
+                <ul>
+                    <li>Seno (sen)</li>
+                    <p>sen = CO/h</p>
+                    <li>Cosseno (cos)</li>
+                    <p>cos = CA/h</p>
+                    <li>Tangente (tg)</li>
+                    <p>tg = CO/CA</p>
+                </ul><br>
+                Essas relações sempre permanecem verdadeiras independentemente do
+                tamanho dos catetos ou hipotenusa do triângulo retângulo.
+                </p>
+                <p>
+                    <b>Usos:</b><br>
+                    Podemos usar estas relações para muitos cálculos matemáticos geométricos
+                    e também para medir determinadas coisas na vida real, como por exemplo,
+                    a atividade em aula que fizemos com o teodolito para medirmos construções
+                    do IFRS campus Erechim.<br>
+                    <br>
+                    <b>Ex 1:</b><br>
+                    <img src="../Imagens/Pitagoras_Exercicio1.png" height="180px" style="border-radius: 10px;"><br>
+                    <i style="font-size: 12px;">Imagem tirada do material disponibilizado pela professora</i><br>
+                    <br>
+                    Aqui podemos aplicar pitágoras, vamos chamar a hipotenusa de "h":<br>
+                    h<sup>2</sup> = 1,2<sup>2</sup> + 0,5<sup>2</sup><br>
+                    h<sup>2</sup> = 1,44 + 0,25<br>
+                    h<sup>2</sup> = 1,69<br>
+                    h = &radic;1,69<br>
+                    h = 1,3km<br>
+                    <br>
+                    <br>
+                    <b>Ex 2:</b><br>
+                    <img src="../Imagens/Pitagoras_Exercicio2.png" height="180px" style="border-radius: 10px;"><br>
+                    <i style="font-size: 12px;">Imagem tirada do material disponibilizado pela professora</i><br>
+                    <br>
+                    Aqui também podemos aplicar pitágoras, vamosextrait as informações:<br>
+                    altura total = 8<br>
+                    altura em que quebrou (isso é um cateto) = x<br>
+                    cateto = 4<br>
+                    hipotenusa = h<br>
+                    Aqui podemos observar que a altura total é a hipotenusa mais o cateto de valor "x"<br>
+                    <br>
+                    altura total = h + x<br>
+                    h = x - altura total<br>
+                    h = x - 8<br>
+                    <br>
+                    Vamos calcular:<br>
+                    h<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup><br>
+                    (x - 8)<sup>2</sup> = 4<sup>2</sup> + x<sup>2</sup><br>
+                    (x - 8)*(x - 8) = 16 + x<sup>2</sup><br>
+                    x<sup>2</sup> -8x - 8x + 64 = 16 + x<sup>2</sup><br>
+                    x<sup>2</sup> -16x + 64 - 16 = + x<sup>2</sup><br>
+                    x<sup>2</sup> -16x + 48 = + x<sup>2</sup><br>
+                    x<sup>2</sup> -16x - x<sup>2</sup> = -48<br>
+                    -16x = -48<br>
+                    16x = 48<br>
+                    x = 48/16<br>
+                    x = 3m<br>
+                    <br>
+                    <i style="font-size: 15px;">OBS: Fiz isso com pesada ajuda do material</i>
+                </p>
+
+                <p>
+                    Para achar ângulos a partir de seno, cosseno, ou tangente, usamos o:<br>
+                    Arco Seno (arcsen) (também pode ser representado com "sen<sup>-1</sup>"),<br>
+                    Arco Cosseno (arccos) (também pode ser representado com "cos<sup>-1</sup>") e, <br>
+                    Arco Tangente (arctg) (também pode ser representado com "tg<sup>-1</sup>")<br>
+                    <br>
+                    Não aprendemos a calcular eles na mão, então sempre utilizamos a ajuda
+                    de uma calculadora matemática para sabermos seus valores
+                </p>
+                <p>
+                    <b>Ex:</b><br>
+                    <img src="../Imagens/Arco_Tangente.png" style="height: 130px; border-radius: 10px;"><br>
+                    <i style="font-size: 12px;">Imagem tirada do material disponibilizado pela professora</i><br>
+                    Aqui usaremos a arco tangente, mas primeiro precisamos descobrir a tangente:<br>
+                    <br>
+                    tg = CO/CA<br>
+                    tg = 9/5<br>
+                    arctg(tg) = arctg(9/5)<br>
+                    arctg(9/5) = &alpha; <br>
+                    29,05° = &alpha;
+                </p>
+
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <h1>Soli Deo Gloria!</h1>
+    </footer>
+
+    <script src="../Scripts/Calculadora_Criptografia.js"></script>
+    <script src="../../../Scripts_Gerais/Modos.js"></script>
+</body>
+
+</html>

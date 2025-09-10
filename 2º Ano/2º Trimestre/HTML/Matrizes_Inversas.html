@@ -1,0 +1,455 @@
+<!--Soli Deo Gloria-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrizes Inversas</title>
+    <link rel="stylesheet" href="../../CSS/ModoClaro.css" id="EstiloPagina">
+</head>
+
+<body>
+
+    <header>
+
+        <button onclick="mudarModo()" id="btnMudarModo">Mudar para modo escuro</button>
+        <a href="../../index.html">2º Ano</a>
+        <a href="../index.html">Index</a>
+        <a href="Sistemas_Lineares.html">Sistemas Lineares</a>
+        <a href="Matrizes_Inversas.html">Matrizes inversas</a>
+        <a href="Criptografia.html">Calculadora Criptografante</a>
+        <a href="TrigonometriaTrianguloRetangulo.html"> Trigonometria no Triângulo Retângulo </a>
+        <a href="autoAvaliacao.html">Auto Avaliação </a>
+
+    </header>
+    <br>
+    <br>
+    <main>
+        <div class="maine-centralizado">
+            <h1>Matrizes Inversas</h1>
+            <p>Assim como existe o inverso de números normais, existe também o inverso
+                de matrizes. <br>
+                Matematicamente nós escrevemos assim: A<sup>-1</sup><br>
+                Onde "A" é o nome da Matriz e "<sup>-1</sup>" é a elevação dela
+                a "-1".
+            </p>
+            <hr style="width: 100%;">
+            <ul id="unordenedList">
+                <li>
+                    <h2>Matriz Identidade</h2>
+                </li>
+                <p>
+                    Basicamente é uma matriz onde a diagonal principal tem sempre o
+                    valor "1" e os demais valores são "0".<br>
+                    Esse tipo de matriz sempre é gerada quando multiplicamos uma matriz
+                    pela sua matriz inversa.<br>
+                    A * A<sup>-1</sup> = I <br>
+                    OU<br>
+                    A<sup>-1</sup> * A = I <br>
+
+                </p>
+                <br>
+                <li>
+                    <h2>Matriz Inversa de ordem 2</h2>
+                </li>
+                <p>
+                    Aqui explicarei os passos para se encontrar a matriz
+                    inversa de uma matriz de ordem 2.<br>
+                    Basta seguir esse passo a passo:
+                </p>
+                <p>
+                <ol>
+                    <li style="background: unset; box-shadow: none;">Calcular o determinante da matriz</li>
+                    <li style="background: unset; box-shadow: none;">Trocar de posição os elementos da diagonal
+                        principal, invertendo ela</li>
+                    <li style="background: unset; box-shadow: none;">Multiplicar por "-1" os elementos da diagonal
+                        secundária</li>
+                    <li style="background: unset; box-shadow: none;">Dividir tudo pelo determinante encontrado no passo
+                        1</li>
+                </ol>
+                <br>
+                <b>Ex com esta matriz:</b><br>
+                2 3<br>
+                1 4<br>
+                <br>
+                <ol>
+                    <li style="background: unset; box-shadow: none;">Calcular o determinante da matriz:</li>
+                    (2*4)-(3*1) = 5<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Trocar de posição os elementos da diagonal
+                        principal, invertendo ela:</li>
+                    2 3<br>
+                    1 4<br>
+                    <br>
+                    Vira:<br>
+                    <br>
+                    4 3<br>
+                    1 2<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Multiplicar por "-1" os elementos da diagonal
+                        secundária:</li>
+                    4 3<br>
+                    1 2<br>
+                    <br>
+                    Vira:<br>
+                    <br>
+                    4 -3<br>
+                    -1 2<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Dividir tudo pelo determinante encontrado no passo
+                        1:</li>
+                    4 -3<br>
+                    -1 2<br>
+                    <br>
+                    Vira:<br>
+                    <br>
+                    (4/5) (-3/5)<br>
+                    (-1/5) (2/5)<br>
+                </ol>
+
+                </p>
+                <br>
+                <li>
+                    <h2>Matriz Inversa de ordem 3</h2>
+                </li>
+                <p>Aqui as coisas já começam a complicar um pouquinho, porém é só seguir o passo a passo:</p>
+                <br>
+                <ol>
+                    <li style="background: unset; box-shadow: none;">Calcular o determinante da matriz</li>
+                    <li style="background: unset; box-shadow: none;">Repetir as duas primeiras linhas para
+                        baixo e repetir as duas primeiras colunas para o lado direito</li>
+                    <li style="background: unset; box-shadow: none;">Cancelar a primeira linha e a primeira coluna</li>
+                    <li style="background: unset; box-shadow: none;">Realizar 9 determinantes de matrizes 2x2 por dentro
+                        desta matriz 4x4</li>
+                    <li style="background: unset; box-shadow: none;">Estes determinantes do passo anterior
+                        farão uma nova matriz, chamada matriz adjunta, que é como se fosse uma
+                        matriz transposta feita com os resultados dos determinantes anteriores</li>
+                    <li style="background: unset; box-shadow: none;"> Dividir cada elemento pelo determinante encotrado
+                        no passo 1</li>
+                </ol>
+                <br>
+                <p>
+                    <b>Ex:</b> <br>
+                    1 2 3<br>
+                    4 5 6<br>
+                    7 9 8<br>
+                    <br>
+                <ol>
+                    <li style="background: unset; box-shadow: none;">Calcular o determinante da matriz</li>
+                    <br>
+                    (1*5*8) + (2*6*7) + (3*4*9) - (3*5*7) - (2*4*8) - (1*6*9)<br>
+                    40 + 84 + 108 - 105 - 64 - 54<br>
+                    232 - 223<br>
+                    det = 9<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Repetir as duas primeiras linhas para
+                        baixo e repetir as duas primeiras colunas para o lado direito</li>
+                    <br>
+                    1 2 3 <b>1 2</b><br>
+                    4 5 6 <b>4 5</b><br>
+                    7 9 8 <b>7 9</b><br>
+                    <b>1 2 3 1 2</b><br>
+                    <b>4 5 6 4 5</b><br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Cancelar a primeira linha e a primeira coluna</li>
+                    <b><del>1 2 3 1 2</del></b><br>
+                    <b><del>4</del></b> 5 6 4 5<br>
+                    <b><del>7</del></b> 9 8 7 9<br>
+                    <b><del>1</del></b> 2 3 1 2<br>
+                    <b><del>4</del></b> 5 6 4 5<br>
+                    <br>
+                    Continuando:
+                    <br>
+                    5 6 4 5<br>
+                    9 8 7 9<br>
+                    2 3 1 2<br>
+                    5 6 4 5<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Realizar 9 determinantes de matrizes 2x2 por dentro
+                        desta matriz 4x4</li>
+                    <br>
+                    det<sub>1</sub> = (5*8) - (6*9)<br>
+                    det<sub>2</sub> = (6*7) - (4*8)<br>
+                    det<sub>3</sub> = (4*9) - (5*7)<br>
+                    det<sub>4</sub> = (9*3) - (8*2)<br>
+                    det<sub>5</sub> = (8*1) - (7*3)<br>
+                    det<sub>6</sub> = (7*2) - (9*1)<br>
+                    det<sub>7</sub> = (2*6) - (3*5)<br>
+                    det<sub>8</sub> = (3*4) - (1*6)<br>
+                    det<sub>9</sub> = (1*5) - (2*4)<br>
+                    <br>
+                    Continuando:
+                    <br>
+                    det<sub>1</sub> = 40 - 54<br>
+                    det<sub>2</sub> = 42 - 32<br>
+                    det<sub>3</sub> = 36 - 35<br>
+                    det<sub>4</sub> = 27 - 16<br>
+                    det<sub>5</sub> = 8 - 21<br>
+                    det<sub>6</sub> = 14 - 9<br>
+                    det<sub>7</sub> = 12 - 15<br>
+                    det<sub>8</sub> = 12 - 6<br>
+                    det<sub>9</sub> = 5 - 8<br>
+                    <br>
+                    Continuando:
+                    <br>
+                    det<sub>1</sub> = - 14<br>
+                    det<sub>2</sub> = 10<br>
+                    det<sub>3</sub> = 1<br>
+                    det<sub>4</sub> = 11<br>
+                    det<sub>5</sub> = - 13<br>
+                    det<sub>6</sub> = 5<br>
+                    det<sub>7</sub> = - 3<br>
+                    det<sub>8</sub> = 6<br>
+                    det<sub>9</sub> = - 3<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Estes determinantes do passo anterior
+                        farão uma nova matriz, chamada matriz adjunta, que é como se fosse uma
+                        matriz transposta feita com os resultados dos determinantes anteriores</li>
+                    <br>
+                    det<sub>1</sub>
+                    det<sub>4</sub>
+                    det<sub>7</sub><br>
+                    det<sub>2</sub>
+                    det<sub>5</sub>
+                    det<sub>8</sub><br>
+                    det<sub>3</sub>
+                    det<sub>6</sub>
+                    det<sub>9</sub><br>
+                    <br>
+                    Continuando:
+                    <br>
+                    <table style="all: unset; justify-content: center; align-items: center;">
+                        <tr>
+                            <td style="justify-content: center; align-items: center;">-14</td>
+                            <td style="justify-content: center; align-items: center;">11</td>
+                            <td style="justify-content: center; align-items: center;">-3</td>
+                        </tr>
+                        <tr>
+                            <td style="justify-content: center; align-items: center;">10</td>
+                            <td style="justify-content: center; align-items: center;">-13</td>
+                            <td style="justify-content: center; align-items: center;">6</td>
+                        </tr>
+                        <tr>
+                            <td style="justify-content: center; align-items: center;">1</td>
+                            <td style="justify-content: center; align-items: center;">5</td>
+                            <td style="justify-content: center; align-items: center;">-3</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+
+
+                    <li style="background: unset; box-shadow: none;"> Dividir cada elemento pelo determinante encotrado
+                        no passo 1</li>
+                    <br>
+                    <table style="all: unset; justify-content: center; align-items: center;">
+                        <tr>
+                            <td style="justify-content: center; align-items: center;">(-14<b>/9</b>)</td>
+                            <td style="justify-content: center; align-items: center;">(11<b>/9</b>)</td>
+                            <td style="justify-content: center; align-items: center;">(-3<b>/9</b>)</td>
+                        </tr>
+                        <tr>
+                            <td style="justify-content: center; align-items: center;">(10<b>/9</b>)</td>
+                            <td style="justify-content: center; align-items: center;">(-13<b>/9</b>)</td>
+                            <td style="justify-content: center; align-items: center;">(6<b>/9</b>)</td>
+                        </tr>
+                        <tr>
+                            <td style="justify-content: center; align-items: center;">(1<b>/9</b>)</td>
+                            <td style="justify-content: center; align-items: center;">(5<b>/9</b>)</td>
+                            <td style="justify-content: center; align-items: center;">(-3<b>/9</b>)</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </ol>
+                E assim concluimos a matriz inversa!
+                </p>
+                <br>
+                <li>
+                    <h2>Criptografia</h2>
+                </li>
+                <p>A criptografia é muito utilizada no meio digital para proteger dados de hackers,
+                    para que, mesmo que os hackers consigam roubar os dados de alguma maneira, não
+                    consigam ler eles. <br>
+                    Existem várias formas de criptografar uma mensagem, a forma que aprendemos em aula
+                    consiste em converter as letras em números e depois colocá-los numa matriz de duas linhas.<br>
+                    Após isso, multiplicamos esta matriz que chamamos de "A" pela matriz criptografante,
+                    que é uma matriz de de ordem 2, e chamamos ela de "M", essa multiplicação gera a
+                    matriz que chamamamos de "N", que é a matriz com a mensagem criptografada.<br>
+                    Para descriptografar a mensagem de N, é necessário multiplicar A<sup>-1</sup>
+                    por N, gerando assim a matriz M, que é a matriz com a mensagem inicial.
+                </p>
+                <p>
+                    <!--Só estou dando o exemplo que meu grupo fez em aula-->
+                    <b>Ex:</b><br>
+                    Mensagem = "Assembly"</br>
+                    Agora convertemos as letras em números.<br>
+                    OBS: "a" vale "1", "b" vale "2", e assim por diante, caracteres especiais tem valores acima de
+                    "27"<br>
+                    <br>
+                    Mensagem em números: 1 19 19 5 13 2 12 25<br>
+                    <br>
+                    M = <br>
+                    1 19 19 5 <br>
+                    13 2 12 25<br>
+                    <br>
+                    A = <br>
+                    3 2 <br>
+                    10 8<br>
+                    <br>
+                    A * M =<br>
+                    [(3*1) + (2*13)] [(3*19) + (2*2)] [(3*19) + (2*12)] [(3*5) + (2*25)] <br>
+                    [(10*1) + (8*13)] [(10*19) + (8*2)] [(10*19) + (8*12)] [(10*5) + (8*25)] <br>
+                    <br>
+                    Continuando:
+                    <br>
+                    [3 + 26] [57 + 4] [57 + 24] [15 + 50] <br>
+                    [10 + 104] [190 + 16] [190 + 96] [50 + 200] <br>
+                    <br>
+                    <br>
+                    E essa é a nossa matriz N(a matriz com a mensagem criptografada):
+                <table style="background: none; padding-top: 0px;">
+                    <tr>
+                        <td>29</td>
+                        <td>61</td>
+                        <td>81</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>114</td>
+                        <td>216</td>
+                        <td>286</td>
+                        <td>250</td>
+                    </tr>
+                </table><br>
+                <br>
+                </p>
+                <p>
+                    Agora, para descriptografar ela, primeiro precisamos da matriz
+                    criptografante inversa, para achá-la, vou seguir o passo a passo:<br>
+
+                <ol>
+                    <li style="background: unset; box-shadow: none;">Calcular o determinante da matriz:</li>
+                    3 2 <br>
+                    10 8<br>
+                    <br>
+                    det = (3*8) - (2*10)<br>
+                    det = 24 - 20<br>
+                    det = 4<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Trocar de posição os elementos da diagonal
+                        principal, invertendo ela:</li>
+                    3 2<br>
+                    10 8<br>
+                    <br>
+                    Vira:<br>
+                    <br>
+                    8 2<br>
+                    10 3<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Multiplicar por "-1" os elementos da diagonal
+                        secundária:</li>
+                    8 2<br>
+                    10 3<br>
+                    <br>
+                    Vira:<br>
+                    <br>
+                    8 -2<br>
+                    -10 3<br>
+                    <br>
+                    <li style="background: unset; box-shadow: none;">Dividir tudo pelo determinante encontrado no passo
+                        1:</li>
+                    8 -2<br>
+                    -10 3<br><br>
+                    Vira:<br>
+                    <br>
+                    (8/4) (-2/4)<br>
+                    (-10/4) (3/4)<br>
+                    <br>
+                    Continuando:
+                    <br>
+                    <table style="all: unset;">
+                        <tr>
+                            <td>2</td>
+                            <td>-0.5</td>
+                        </tr>
+                        <tr>
+                            <td>-2.5</td>
+                            <td>0.75</td>
+                        </tr>
+                    </table>
+                    <br>
+                </ol>
+                <br>
+                Agora que possuimos a matriz A<sup>-1</sup>, basta multiplicá-la com a
+                mensagem criptografada (matriz "N") e achar a mensagem novamente:
+                <br>
+                A<sup>-1</sup> * N =<br>
+                <table style="all: unset; border-collapse: collapse;">
+                    <tr>
+                        <td style="border: 1px solid;">(2 * 29) + (-0.5 * 114)</td>
+                        <td style="border: 1px solid;">(2 * 61) + (-0.5 * 206)</td>
+                        <td style="border: 1px solid;">(2 * 81) + (-0.5 * 286)</td>
+                        <td style="border: 1px solid;">(2 * 65) + (-0.5 * 250)</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid;">(-2.5 * 29) + (0.75 * 114)</td>
+                        <td style="border: 1px solid;">(-2.5 * 61) + (0.75 * 206)</td>
+                        <td style="border: 1px solid;">(-2.5 * 81) + (0.75 * 286)</td>
+                        <td style="border: 1px solid;">(-2.5 * 65) + (0.75 * 250)</td>
+                    </tr>
+                </table><br>
+                <br>
+                Continuando:
+                <br>
+                <table style="all: unset; border-collapse: collapse;">
+                    <tr>
+                        <td style="border: 1px solid;">58 - 57</td>
+                        <td style="border: 1px solid;">122 - 103</td>
+                        <td style="border: 1px solid;">162 - 143</td>
+                        <td style="border: 1px solid;">130 - 125</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid;">- 72.5 + 85.5</td>
+                        <td style="border: 1px solid;">- 152.5 + 154.5</td>
+                        <td style="border: 1px solid;">- 202.5 + 214.5</td>
+                        <td style="border: 1px solid;">- 162.5 + 187.5</td>
+                    </tr>
+                </table><br>
+                <br>
+                E assim obtemos novamente a matriz com a mensagem:
+                <br>
+                <table style="all: unset; border-collapse: collapse;">
+                    <tr>
+                        <td style="border: 1px solid;">1</td>
+                        <td style="border: 1px solid;">19</td>
+                        <td style="border: 1px solid;">19</td>
+                        <td style="border: 1px solid;">5</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid;">13</td>
+                        <td style="border: 1px solid;">2</td>
+                        <td style="border: 1px solid;">12</td>
+                        <td style="border: 1px solid;">25</td>
+                    </tr>
+                </table><br>
+                <br>
+                Agora só falta converter ordenar os números e convertê-los para letras:<br>
+                1 19 19 5 13 2 12 25<br>
+                a s s e m b l y<br>
+                <br>
+                Assim obtivemos de volta a mensagem.<br>
+                </p>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <h1>Soli Deo Gloria!</h1>
+    </footer>
+
+    <script src="../../../Scripts_Gerais/Modos.js"></script>
+</body>
+
+</html>
